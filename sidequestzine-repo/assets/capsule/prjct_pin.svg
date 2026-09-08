@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Anton&amp;family=Abril+Fatface&amp;family=Archivo+Black&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Courier+Prime:wght@700&amp;family=Oswald:wght@600;700&amp;display=swap');
+      .f-fat   { font-family:'Abril Fatface','Playfair Display',serif; }
+      .f-cond  { font-family:'Anton','Oswald','Arial Narrow',sans-serif; }
+      .f-serif { font-family:'Playfair Display',Georgia,serif; }
+      .f-black { font-family:'Archivo Black','Poppins',sans-serif; }
+      .f-mono  { font-family:'Courier Prime','Courier New',monospace; }
+      .lead    { font-family:'Archivo Black','Helvetica Neue','Arial Black','Noto Sans CJK JP',Helvetica,sans-serif; font-weight:900; }
+    </style>
+    <filter id="scrapShadow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="1" dy="3" stdDeviation="2.5" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="plateShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="11" flood-color="#12202c" flood-opacity="0.32"/>
+    </filter>
+    <linearGradient id="goldMetal" x1="0%" y1="0%" x2="18%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8D8"/><stop offset="11%" stop-color="#F2D98F"/>
+      <stop offset="24%" stop-color="#CBA23C"/><stop offset="38%" stop-color="#8E6414"/>
+      <stop offset="50%" stop-color="#F6E3A2"/><stop offset="62%" stop-color="#FFF6C8"/>
+      <stop offset="76%" stop-color="#C79B36"/><stop offset="88%" stop-color="#7C540F"/>
+      <stop offset="100%" stop-color="#E4C371"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#plateShadow)">
+    <rect x="14" y="14" width="872" height="512" rx="78" fill="url(#goldMetal)"/>
+    <rect x="40" y="40" width="820" height="460" rx="62" fill="#182530" stroke="url(#goldMetal)" stroke-width="7"/>
+  </g>
+  <g transform="translate(126,302)">
+    <g transform="scale(1.06,1)">
+      <text x="0" y="0" class="lead" font-size="96" letter-spacing="-5"
+            fill="#F6E3A2">pRjct</text>
+    </g>
+    <g transform="rotate(-8 262 -24)">
+      <polygon points="281,-16 270,-5 254,-5 243,-16 243,-32 254,-43 270,-43 281,-32" fill="#C8102E" stroke="url(#goldMetal)" stroke-width="4.5"/>
+    </g>
+  </g>
+  <g transform="translate(146,353) rotate(-6.0) scale(0.720)" filter="url(#scrapShadow)">
+    <polygon points="-38,-40 12,-46 40,-33 43,26 8,41 -33,37 -41,-6" fill="#EFEADC" stroke="url(#goldMetal)" stroke-width="3.5" stroke-linejoin="round"/>
+    <text x="0" y="23" text-anchor="middle" class="f-fat" font-size="74" fill="#1A1A18" stroke="#FFFDF6" stroke-width="2.1" paint-order="stroke" transform="rotate(3)">s</text>
+  </g>
+  <g transform="translate(222,346) rotate(5.0) scale(0.720)" filter="url(#scrapShadow)">
+    <polygon points="-30,-44 22,-39 34,-27 31,30 -12,40 -36,26 -33,-12" fill="#26241F" stroke="url(#goldMetal)" stroke-width="3.5" stroke-linejoin="round"/>
+    <text x="0" y="23" text-anchor="middle" class="f-cond" font-size="74" fill="#F2EFE4" stroke="#14100A" stroke-width="2.1" paint-order="stroke" transform="rotate(-4)">i</text>
+  </g>
+  <g transform="translate(298,352) rotate(-3.0) scale(0.720)" filter="url(#scrapShadow)">
+    <polygon points="-36,-31 6,-42 37,-30 33,22 14,38 -30,33 -39,4" fill="#B5A47E" stroke="url(#goldMetal)" stroke-width="3.5" stroke-linejoin="round"/>
+    <text x="0" y="23" text-anchor="middle" class="f-serif" font-style="italic" font-weight="700" font-size="74" fill="#0F0D0A" stroke="#FFFDF6" stroke-width="2.1" paint-order="stroke" transform="rotate(2)">d</text>
+  </g>
+  <g transform="translate(374,346) rotate(7.0) scale(0.720)" filter="url(#scrapShadow)">
+    <polygon points="-33,-36 18,-41 39,-24 34,28 -6,42 -38,29 -30,-8" fill="#F1ECDE" stroke="url(#goldMetal)" stroke-width="3.5" stroke-linejoin="round"/>
+    <text x="0" y="23" text-anchor="middle" class="f-black" font-size="74" fill="#1A1A18" stroke="#FFFDF6" stroke-width="2.1" paint-order="stroke" transform="rotate(-3)">e</text>
+  </g>
+  <g transform="translate(450,353) rotate(-5.0) scale(0.720)" filter="url(#scrapShadow)">
+    <polygon points="-27,-42 20,-37 38,-20 32,32 -10,41 -35,22 -32,-14" fill="#4A4A45" stroke="url(#goldMetal)" stroke-width="3.5" stroke-linejoin="round"/>
+    <text x="0" y="23" text-anchor="middle" class="f-mono" font-weight="700" font-size="74" fill="#EFEAD9" stroke="#14100A" stroke-width="2.1" paint-order="stroke" transform="rotate(4)">q</text>
+  </g>
+  <g transform="translate(526,348) rotate(4.0) scale(0.720)" filter="url(#scrapShadow)">
+    <polygon points="-38,-40 12,-46 40,-33 43,26 8,41 -33,37 -41,-6" fill="#EFEADC" stroke="url(#goldMetal)" stroke-width="3.5" stroke-linejoin="round"/>
+    <text x="0" y="23" text-anchor="middle" class="f-fat" font-size="74" fill="#1A1A18" stroke="#FFFDF6" stroke-width="2.1" paint-order="stroke" transform="rotate(-2)">u</text>
+  </g>
+  <g transform="translate(602,354) rotate(-6.0) scale(0.720)" filter="url(#scrapShadow)">
+    <polygon points="-30,-44 22,-39 34,-27 31,30 -12,40 -36,26 -33,-12" fill="#26241F" stroke="url(#goldMetal)" stroke-width="3.5" stroke-linejoin="round"/>
+    <text x="0" y="23" text-anchor="middle" class="f-cond" font-size="74" fill="#F2EFE4" stroke="#14100A" stroke-width="2.1" paint-order="stroke" transform="rotate(3)">e</text>
+  </g>
+  <g transform="translate(678,347) rotate(3.0) scale(0.720)" filter="url(#scrapShadow)">
+    <polygon points="-36,-31 6,-42 37,-30 33,22 14,38 -30,33 -39,4" fill="#B5A47E" stroke="url(#goldMetal)" stroke-width="3.5" stroke-linejoin="round"/>
+    <text x="0" y="23" text-anchor="middle" class="f-serif" font-style="italic" font-weight="700" font-size="74" fill="#0F0D0A" stroke="#FFFDF6" stroke-width="2.1" paint-order="stroke" transform="rotate(-4)">s</text>
+  </g>
+  <g transform="translate(754,352) rotate(-4.0) scale(0.720)" filter="url(#scrapShadow)">
+    <polygon points="-33,-36 18,-41 39,-24 34,28 -6,42 -38,29 -30,-8" fill="#F1ECDE" stroke="url(#goldMetal)" stroke-width="3.5" stroke-linejoin="round"/>
+    <text x="0" y="23" text-anchor="middle" class="f-black" font-size="74" fill="#1A1A18" stroke="#FFFDF6" stroke-width="2.1" paint-order="stroke" transform="rotate(2)">t</text>
+  </g>
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&amp;family=Anton&amp;family=Archivo+Black&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Oswald:wght@500;600;700&amp;family=Courier+Prime:wght@700&amp;display=swap');
+      .f-fat   { font-family:'Abril Fatface','Playfair Display',serif; }
+      .f-cond  { font-family:'Anton','Oswald','Arial Narrow',sans-serif; }
+      .f-serif { font-family:'Playfair Display',Georgia,serif; }
+      .f-black { font-family:'Archivo Black','Poppins',sans-serif; }
+      .f-mono  { font-family:'Courier Prime','Courier New',monospace; }
+      .sign    { font-family:'Oswald','Arial Narrow',sans-serif; }
+    </style>
+    <filter id="scrapShadow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="1" dy="3" stdDeviation="2.5" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="signShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- die-cut border -->
+  <rect x="8" y="8" width="584" height="784" rx="52" fill="#F8F2E6"/>
+  <rect x="24" y="24" width="552" height="752" rx="38" fill="#182530"/>
+
+  <!-- line 1 -->
+  <text x="300" y="112" text-anchor="middle" class="sign" font-size="34" font-weight="500"
+        letter-spacing="7" fill="#F8F2E6" opacity="0.92">THE STOP SIGN SAYS</text>
+
+  <!-- sunburst behind the sign -->
+  <g fill="#EAAC44" opacity="0.92"><polygon points="417,243 478,255 417,267"/><polygon points="413,289 440,313 404,311"/><polygon points="391,330 426,381 375,346"/><polygon points="356,359 358,395 334,368"/><polygon points="312,372 300,433 288,372"/><polygon points="266,368 242,395 244,359"/><polygon points="225,346 174,381 209,330"/><polygon points="196,311 160,313 187,289"/><polygon points="183,267 122,255 183,243"/><polygon points="187,221 160,197 196,199"/><polygon points="209,180 174,129 225,164"/><polygon points="244,151 242,115 266,142"/><polygon points="288,138 300,77 312,138"/><polygon points="334,142 358,115 356,151"/><polygon points="375,164 426,129 391,180"/><polygon points="404,199 440,197 413,221"/></g>
+
+  <!-- the sign IS the word -->
+  <g filter="url(#signShadow)" transform="rotate(-6 300 255)">
+    <polygon points="415,303 348,370 252,370 185,303 185,207 252,140 348,140 415,207"
+             fill="#C8102E" stroke="#F8F2E6" stroke-width="9"/>
+    <text x="300" y="281" text-anchor="middle" class="sign" font-size="72" font-weight="700"
+          letter-spacing="3" fill="#FFFFFF">SIDE</text>
+  </g>
+
+  <!-- the instruction, in collage -->
+  <g transform="translate(138,509) rotate(-7.0) scale(1.150)" filter="url(#scrapShadow)">
+    <polygon points="-38,-40 12,-46 40,-33 43,26 8,41 -33,37 -41,-6" fill="#EFEADC"/>
+    <text x="0" y="23" text-anchor="middle" class="f-fat" font-size="74" fill="#1A1A18" stroke="#FFFDF6" stroke-width="2.1" paint-order="stroke" transform="rotate(3)">K</text>
+  </g>
+  <g transform="translate(246,499) rotate(5.0) scale(1.150)" filter="url(#scrapShadow)">
+    <polygon points="-30,-44 22,-39 34,-27 31,30 -12,40 -36,26 -33,-12" fill="#26241F"/>
+    <text x="0" y="23" text-anchor="middle" class="f-cond" font-size="74" fill="#F2EFE4" stroke="#14100A" stroke-width="2.1" paint-order="stroke" transform="rotate(-4)">E</text>
+  </g>
+  <g transform="translate(354,508) rotate(-3.0) scale(1.150)" filter="url(#scrapShadow)">
+    <polygon points="-36,-31 6,-42 37,-30 33,22 14,38 -30,33 -39,4" fill="#B5A47E"/>
+    <text x="0" y="23" text-anchor="middle" class="f-serif" font-style="italic" font-weight="700" font-size="74" fill="#0F0D0A" stroke="#FFFDF6" stroke-width="2.1" paint-order="stroke" transform="rotate(2)">E</text>
+  </g>
+  <g transform="translate(462,500) rotate(8.0) scale(1.150)" filter="url(#scrapShadow)">
+    <polygon points="-33,-36 18,-41 39,-24 34,28 -6,42 -38,29 -30,-8" fill="#F1ECDE"/>
+    <text x="0" y="23" text-anchor="middle" class="f-black" font-size="74" fill="#1A1A18" stroke="#FFFDF6" stroke-width="2.1" paint-order="stroke" transform="rotate(-3)">P</text>
+  </g>
+  <g transform="translate(100,625) rotate(8.0) scale(1.150)" filter="url(#scrapShadow)">
+    <polygon points="-33,-36 18,-41 39,-24 34,28 -6,42 -38,29 -30,-8" fill="#F1ECDE"/>
+    <text x="0" y="23" text-anchor="middle" class="f-black" font-size="74" fill="#1A1A18" stroke="#FFFDF6" stroke-width="2.1" paint-order="stroke" transform="rotate(-3)">G</text>
+  </g>
+  <g transform="translate(200,634) rotate(-6.0) scale(1.150)" filter="url(#scrapShadow)">
+    <polygon points="-27,-42 20,-37 38,-20 32,32 -10,41 -35,22 -32,-14" fill="#4A4A45"/>
+    <text x="0" y="23" text-anchor="middle" class="f-mono" font-weight="700" font-size="74" fill="#EFEAD9" stroke="#14100A" stroke-width="2.1" paint-order="stroke" transform="rotate(4)">O</text>
+  </g>
+  <g transform="translate(300,627) rotate(4.0) scale(1.150)" filter="url(#scrapShadow)">
+    <polygon points="-38,-40 12,-46 40,-33 43,26 8,41 -33,37 -41,-6" fill="#EFEADC"/>
+    <text x="0" y="23" text-anchor="middle" class="f-fat" font-size="74" fill="#1A1A18" stroke="#FFFDF6" stroke-width="2.1" paint-order="stroke" transform="rotate(-2)">I</text>
+  </g>
+  <g transform="translate(400,635) rotate(-5.0) scale(1.150)" filter="url(#scrapShadow)">
+    <polygon points="-30,-44 22,-39 34,-27 31,30 -12,40 -36,26 -33,-12" fill="#26241F"/>
+    <text x="0" y="23" text-anchor="middle" class="f-cond" font-size="74" fill="#F2EFE4" stroke="#14100A" stroke-width="2.1" paint-order="stroke" transform="rotate(3)">N</text>
+  </g>
+  <g transform="translate(500,626) rotate(3.0) scale(1.150)" filter="url(#scrapShadow)">
+    <polygon points="-36,-31 6,-42 37,-30 33,22 14,38 -30,33 -39,4" fill="#B5A47E"/>
+    <text x="0" y="23" text-anchor="middle" class="f-serif" font-style="italic" font-weight="700" font-size="74" fill="#0F0D0A" stroke="#FFFDF6" stroke-width="2.1" paint-order="stroke" transform="rotate(-4)">G</text>
+  </g>
+
+  <!-- forward arrow -->
+  <g stroke="#E15A2C" stroke-width="12" stroke-linecap="round" fill="none">
+    <path d="M232 716 L352 716"/>
+    <path d="M330 696 L354 716 L330 736"/>
+  </g>
+
+  <!-- attribution -->
+  <text x="300" y="762" text-anchor="middle" class="sign" font-size="19" font-weight="500"
+        letter-spacing="6" fill="#F8F2E6" opacity="0.45">SIDE QUEST</text>
+</svg>
