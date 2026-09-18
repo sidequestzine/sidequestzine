@@ -49,6 +49,20 @@
 
 <footer>
   <div class="wrap">
+    <div class="signup" id="signup">
+      <div class="signup-inner">
+        <div class="signup-copy">
+          <div class="signup-tag">GET IN BEFORE ISSUE 01</div>
+          <p>No spam, no daily nonsense. Just the founding capsule opening, Issue 01 dropping, and the next unlock. That's it.</p>
+        </div>
+        <form class="signup-form" id="signup-form">
+          <input type="email" name="email" placeholder="you@wherever.com" required autocomplete="email">
+          <button type="submit">Keep me posted</button>
+        </form>
+      </div>
+      <div class="signup-msg" id="signup-msg" hidden></div>
+    </div>
+
     <img src="/assets/thumbs/mark_2_deep_sea.png" alt="Side Quest badge">
     <div class="tag">The stop sign says SIDE. Keep going.</div>
     <div class="links">
@@ -59,5 +73,44 @@
   </div>
 </footer>
 
+
+<script>
+(function(){
+  var form = document.getElementById('signup-form');
+  if (!form) return;
+  var msg = document.getElementById('signup-msg');
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var email = form.email.value.trim();
+    var btn = form.querySelector('button');
+    var original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    msg.hidden = true;
+    try {
+      var res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email })
+      });
+      var data = await res.json();
+      if (data.ok) {
+        form.hidden = true;
+        msg.textContent = "You're on the list. That's it, that's the whole thing.";
+        msg.className = 'signup-msg ok';
+        msg.hidden = false;
+      } else {
+        throw new Error(data.error || 'Something went wrong.');
+      }
+    } catch (err) {
+      msg.textContent = err.message;
+      msg.className = 'signup-msg err';
+      msg.hidden = false;
+      btn.disabled = false;
+      btn.textContent = original;
+    }
+  });
+})();
+</script>
 </body>
 </html>
