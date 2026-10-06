@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="700" height="700">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&amp;family=Abril+Fatface&amp;family=Anton&amp;family=Archivo+Black&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Courier+Prime:wght@700&amp;display=swap');
+      .cond    { font-family:'Oswald','Arial Narrow',sans-serif; font-weight:700; }
+      .f-fat   { font-family:'Abril Fatface','Playfair Display',serif; }
+      .f-cond  { font-family:'Anton','Oswald','Arial Narrow',sans-serif; }
+      .f-serif { font-family:'Playfair Display',Georgia,serif; }
+      .f-black { font-family:'Archivo Black','Poppins',sans-serif; }
+      .f-mono  { font-family:'Courier Prime','Courier New',monospace; }
+    </style>
+    <clipPath id="globeClip"><circle cx="350" cy="348" r="104"/></clipPath>
+    <path id="arcTop" d="M 96,368 A 262,262 0 0 1 604,368"/>
+    <path id="arcDept" d="M 104,498 Q 350,652 596,498"/>
+  </defs>
+  <rect x="0" y="0" width="700" height="700" fill="none"/>
+
+
+  <!-- sunburst -->
+  <g fill="#EAAC44" stroke="#12202E" stroke-width="6" stroke-linejoin="round"><polygon points="450,338 502,348 450,358"/><polygon points="446,377 470,398 438,395"/><polygon points="427,411 457,455 413,425"/><polygon points="397,436 400,468 379,444"/><polygon points="360,448 350,500 340,448"/><polygon points="321,444 300,468 303,436"/><polygon points="287,425 243,455 273,411"/><polygon points="262,395 230,398 254,377"/><polygon points="250,358 198,348 250,338"/><polygon points="254,319 230,298 262,301"/><polygon points="273,285 243,241 287,271"/><polygon points="303,260 300,228 321,252"/><polygon points="340,248 350,196 360,248"/><polygon points="379,252 400,228 397,260"/><polygon points="413,271 457,241 427,285"/><polygon points="438,301 470,298 446,319"/></g>
+
+  <!-- globe -->
+  <circle cx="350" cy="348" r="104" fill="#4C8FD6" stroke="#12202E" stroke-width="9"/>
+  <g clip-path="url(#globeClip)" fill="#2CA79B">
+    <path d="M300 390 C 336 376, 372 398, 362 426 C 352 454, 310 460, 288 442 C 272 428, 278 402, 300 390 Z"/>
+    <path d="M398 338 C 420 330, 438 344, 432 364 C 426 384, 400 386, 390 370 C 382 356, 386 344, 398 338 Z"/>
+    <path d="M296 292 C 322 282, 348 296, 342 318 C 336 340, 306 344, 292 328 C 282 316, 284 298, 296 292 Z"/>
+  </g>
+  <g clip-path="url(#globeClip)" fill="none" stroke="#12202E" stroke-width="5" opacity="0.75">
+    <ellipse cx="350" cy="348" rx="104" ry="38"/>
+    <ellipse cx="350" cy="348" rx="38" ry="104"/>
+    <line x1="246" y1="348" x2="454" y2="348"/>
+  </g>
+  <circle cx="350" cy="348" r="104" fill="none" stroke="#12202E" stroke-width="9"/>
+
+  <!-- stop sign, upper-left inside the globe -->
+  <g transform="rotate(-8 292 292)">
+    <polygon points="344,313 313,344 271,344 240,313 240,271 271,240 313,240 344,271" fill="#C8102E" stroke="#F4EEDD" stroke-width="9"/>
+    <polygon points="344,313 313,344 271,344 240,313 240,271 271,240 313,240 344,271" fill="none" stroke="#12202E" stroke-width="4"/>
+    <text x="292" y="304" text-anchor="middle" class="cond" font-size="32" letter-spacing="1" fill="#F4EEDD">SIDE</text>
+  </g>
+
+  <!-- QUEST : collage, inside the globe below the sign -->
+  <g transform="translate(258,395) rotate(-7.0) scale(0.600)">
+    <polygon points="-38,-40 12,-46 40,-33 43,26 8,41 -33,37 -41,-6" fill="#EFEADC" stroke="#12202E" stroke-width="4" stroke-linejoin="round"/>
+    <text x="0" y="23" text-anchor="middle" class="f-fat" font-size="74" fill="#1A1A18" stroke="#FFFDF6" stroke-width="2.1" paint-order="stroke" transform="rotate(3)">Q</text>
+  </g>
+  <g transform="translate(310,388) rotate(5.0) scale(0.600)">
+    <polygon points="-30,-44 22,-39 34,-27 31,30 -12,40 -36,26 -33,-12" fill="#26241F" stroke="#12202E" stroke-width="4" stroke-linejoin="round"/>
+    <text x="0" y="23" text-anchor="middle" class="f-cond" font-size="74" fill="#F2EFE4" stroke="#14100A" stroke-width="2.1" paint-order="stroke" transform="rotate(-4)">U</text>
+  </g>
+  <g transform="translate(362,394) rotate(-3.0) scale(0.600)">
+    <polygon points="-36,-31 6,-42 37,-30 33,22 14,38 -30,33 -39,4" fill="#B5A47E" stroke="#12202E" stroke-width="4" stroke-linejoin="round"/>
+    <text x="0" y="23" text-anchor="middle" class="f-serif" font-style="italic" font-weight="700" font-size="74" fill="#0F0D0A" stroke="#FFFDF6" stroke-width="2.1" paint-order="stroke" transform="rotate(2)">E</text>
+  </g>
+  <g transform="translate(414,388) rotate(8.0) scale(0.600)">
+    <polygon points="-33,-36 18,-41 39,-24 34,28 -6,42 -38,29 -30,-8" fill="#F1ECDE" stroke="#12202E" stroke-width="4" stroke-linejoin="round"/>
+    <text x="0" y="23" text-anchor="middle" class="f-black" font-size="74" fill="#1A1A18" stroke="#FFFDF6" stroke-width="2.1" paint-order="stroke" transform="rotate(-3)">S</text>
+  </g>
+  <g transform="translate(466,395) rotate(-6.0) scale(0.600)">
+    <polygon points="-27,-42 20,-37 38,-20 32,32 -10,41 -35,22 -32,-14" fill="#4A4A45" stroke="#12202E" stroke-width="4" stroke-linejoin="round"/>
+    <text x="0" y="23" text-anchor="middle" class="f-mono" font-weight="700" font-size="74" fill="#EFEAD9" stroke="#14100A" stroke-width="2.1" paint-order="stroke" transform="rotate(4)">T</text>
+  </g>
+
+
+  <!-- est. flanking -->
+  <text x="146" y="378" text-anchor="middle" class="cond" font-size="34" letter-spacing="2" fill="#12202E">EST.</text>
+  <text x="560" y="378" text-anchor="middle" class="cond" font-size="34" letter-spacing="2" fill="#12202E">2026</text>
+
+  <!-- department line, plain arched text (no ribbon) -->
+  <text class="cond" font-size="42" letter-spacing="2" fill="#12202E">
+    <textPath href="#arcDept" startOffset="50%" text-anchor="middle">CREATIVE ARTS DEPT.</textPath>
+  </text>
+</svg>

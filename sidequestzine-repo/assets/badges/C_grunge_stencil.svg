@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-90 -90 980 980" width="980" height="980">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&amp;family=Anton&amp;family=Archivo+Black&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Oswald:wght@600;700&amp;family=Courier+Prime:wght@700&amp;display=swap');
+      .f-fat   { font-family:'Abril Fatface','Playfair Display',serif; }
+      .f-cond  { font-family:'Anton','Oswald','Arial Narrow',sans-serif; }
+      .f-serif { font-family:'Playfair Display',Georgia,serif; }
+      .f-black { font-family:'Archivo Black','Poppins',sans-serif; }
+      .f-mono  { font-family:'Courier Prime','Courier New',monospace; }
+      .sign    { font-family:'Oswald','Arial Narrow',sans-serif; }
+    </style>
+
+    <filter id="scrapShadow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="1" dy="3" stdDeviation="2.5" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="patchShadow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#12202c" flood-opacity="0.4"/>
+    </filter>
+    <filter id="rough" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014 0.03" numOctaves="3" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="14" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.9 0 0 0 0"/>
+    </filter>
+    <linearGradient id="oceanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5FA8DB"/><stop offset="100%" stop-color="#2E6D9E"/>
+    </linearGradient>
+    <clipPath id="globeClip"><circle cx="400" cy="400" r="262"/></clipPath>
+  </defs>
+
+  <g><g fill="#F0C878">
+    <polygon points="810,364 872,400 810,436"/><polygon points="801,493 820,537 779,561"/><polygon points="753,613 782,677 711,670"/><polygon points="670,711 660,758 613,753"/>
+    <polygon points="561,779 546,849 493,801"/><polygon points="436,810 400,842 364,810"/><polygon points="307,801 254,849 239,779"/><polygon points="187,753 140,758 130,711"/>
+    <polygon points="89,670 18,677 47,613"/><polygon points="21,561 -20,537 -1,493"/><polygon points="-10,436 -72,400 -10,364"/><polygon points="-1,307 -20,263 21,239"/>
+    <polygon points="47,187 18,123 89,130"/><polygon points="130,89 140,42 187,47"/><polygon points="239,21 254,-49 307,-1"/><polygon points="364,-10 400,-42 436,-10"/>
+    <polygon points="493,-1 546,-49 561,21"/><polygon points="613,47 660,42 670,89"/><polygon points="711,130 782,123 753,187"/><polygon points="779,239 820,263 801,307"/>
+  </g></g>
+
+  <g filter="url(#rough)"><g>
+    <circle cx="400" cy="400" r="412" fill="#D9793F"/>
+    <circle cx="400" cy="400" r="392" fill="#A6501E"/>
+    <circle cx="400" cy="400" r="372" fill="#8B7355"/>
+    <circle cx="400" cy="400" r="352" fill="#2B2621"/>
+    <circle cx="400" cy="400" r="338" fill="#E8DCC8"/>
+    <circle cx="400" cy="400" r="330" fill="#2B2621"/>
+    <circle cx="400" cy="400" r="262" fill="url(#oceanGrad)"/>
+  </g></g>
+
+  <g clip-path="url(#globeClip)" fill="#5C7A4E" opacity="0.95">
+    <path d="M300 260 C 340 240, 390 248, 400 288 C 408 318, 375 335, 340 325 C 310 318, 280 295, 300 260 Z"/>
+    <path d="M230 390 C 275 370, 315 398, 305 440 C 296 480, 245 498, 210 472 C 188 455, 198 408, 230 390 Z"/>
+    <path d="M330 490 C 380 475, 430 498, 420 540 C 412 578, 355 592, 318 566 C 292 548, 292 507, 330 490 Z"/>
+  </g>
+  <g clip-path="url(#globeClip)" stroke="#E8DCC8" stroke-width="2.5" opacity="0.25" fill="none">
+    <ellipse cx="400" cy="400" rx="262" ry="92"/>
+    <ellipse cx="400" cy="400" rx="92" ry="262"/>
+    <ellipse cx="400" cy="400" rx="175" ry="262"/>
+  </g>
+  
+  <circle cx="400" cy="400" r="330" fill="none" stroke="#1C1815" stroke-width="4"/>
+  <circle cx="400" cy="400" r="262" fill="none" stroke="#1C1815" stroke-width="4"/>
+
+  <!-- QUEST : ransom-note collage -->
+  <g transform="translate(225,468) rotate(12.5) scale(0.980)" filter="url(#scrapShadow)">
+    <polygon points="-38,-40 12,-46 40,-33 43,26 8,41 -33,37 -41,-6" fill="#EFEADC"/>
+    <text x="0" y="22" text-anchor="middle" class="f-fat" font-size="70" fill="#1A1A18" transform="rotate(3)">Q</text>
+  </g>
+  <g transform="translate(306,486) rotate(11.7) scale(0.980)" filter="url(#scrapShadow)">
+    <polygon points="-30,-44 22,-39 34,-27 31,30 -12,40 -36,26 -33,-12" fill="#26241F"/>
+    <text x="0" y="22" text-anchor="middle" class="f-cond" font-size="70" fill="#F2EFE4" transform="rotate(-3)">U</text>
+  </g>
+  <g transform="translate(400,492) rotate(-3.0) scale(0.980)" filter="url(#scrapShadow)">
+    <polygon points="-36,-31 6,-42 37,-30 33,22 14,38 -30,33 -39,4" fill="#9C8B6B"/>
+    <text x="0" y="22" text-anchor="middle" class="f-serif" font-style="italic" font-weight="700" font-size="70" fill="#171614" transform="rotate(2)">E</text>
+  </g>
+  <g transform="translate(494,486) rotate(-2.7) scale(0.980)" filter="url(#scrapShadow)">
+    <polygon points="-33,-36 18,-41 39,-24 34,28 -6,42 -38,29 -30,-8" fill="#F1ECDE"/>
+    <text x="0" y="22" text-anchor="middle" class="f-black" font-size="70" fill="#1A1A18" transform="rotate(-4)">S</text>
+  </g>
+  <g transform="translate(575,468) rotate(-21.5) scale(0.980)" filter="url(#scrapShadow)">
+    <polygon points="-27,-42 20,-37 38,-20 32,32 -10,41 -35,22 -32,-14" fill="#4A4A45"/>
+    <text x="0" y="22" text-anchor="middle" class="f-mono" font-weight="700" font-size="70" fill="#EFEAD9" transform="rotate(3)">T</text>
+  </g>
+
+  <!-- with Rodrius : ransom-note collage -->
+  <g transform="translate(248,654) rotate(34.8) scale(0.340)" filter="url(#scrapShadow)">
+    <polygon points="-36,-31 6,-42 37,-30 33,22 14,38 -30,33 -39,4" fill="#EFEADC"/>
+    <text x="0" y="24" text-anchor="middle" class="f-serif" font-style="italic" font-weight="700" font-size="76" fill="#1A1A18" transform="rotate(-4)">w</text>
+  </g>
+  <g transform="translate(274,668) rotate(20.2) scale(0.340)" filter="url(#scrapShadow)">
+    <polygon points="-33,-36 18,-41 39,-24 34,28 -6,42 -38,29 -30,-8" fill="#C9BC9C"/>
+    <text x="0" y="24" text-anchor="middle" class="f-black" font-size="76" fill="#171614" transform="rotate(5)">i</text>
+  </g>
+  <g transform="translate(301,679) rotate(22.6) scale(0.340)" filter="url(#scrapShadow)">
+    <polygon points="-27,-42 20,-37 38,-20 32,32 -10,41 -35,22 -32,-14" fill="#F1ECDE"/>
+    <text x="0" y="24" text-anchor="middle" class="f-mono" font-weight="700" font-size="76" fill="#26241F" transform="rotate(-3)">t</text>
+  </g>
+  <g transform="translate(328,687) rotate(11.0) scale(0.340)" filter="url(#scrapShadow)">
+    <polygon points="-38,-40 12,-46 40,-33 43,26 8,41 -33,37 -41,-6" fill="#EFEADC"/>
+    <text x="0" y="24" text-anchor="middle" class="f-fat" font-size="76" fill="#1A1A18" transform="rotate(4)">h</text>
+  </g>
+  <g transform="translate(386,696) rotate(7.8) scale(0.340)" filter="url(#scrapShadow)">
+    <polygon points="-30,-44 22,-39 34,-27 31,30 -12,40 -36,26 -33,-12" fill="#C9BC9C"/>
+    <text x="0" y="24" text-anchor="middle" class="f-cond" font-size="76" fill="#171614" transform="rotate(-5)">R</text>
+  </g>
+  <g transform="translate(414,696) rotate(-6.8) scale(0.340)" filter="url(#scrapShadow)">
+    <polygon points="-36,-31 6,-42 37,-30 33,22 14,38 -30,33 -39,4" fill="#F1ECDE"/>
+    <text x="0" y="24" text-anchor="middle" class="f-serif" font-style="italic" font-weight="700" font-size="76" fill="#26241F" transform="rotate(3)">o</text>
+  </g>
+  <g transform="translate(443,693) rotate(-6.4) scale(0.340)" filter="url(#scrapShadow)">
+    <polygon points="-33,-36 18,-41 39,-24 34,28 -6,42 -38,29 -30,-8" fill="#EFEADC"/>
+    <text x="0" y="24" text-anchor="middle" class="f-black" font-size="76" fill="#1A1A18" transform="rotate(-4)">d</text>
+  </g>
+  <g transform="translate(472,687) rotate(-19.0) scale(0.340)" filter="url(#scrapShadow)">
+    <polygon points="-27,-42 20,-37 38,-20 32,32 -10,41 -35,22 -32,-14" fill="#C9BC9C"/>
+    <text x="0" y="24" text-anchor="middle" class="f-mono" font-weight="700" font-size="76" fill="#171614" transform="rotate(5)">r</text>
+  </g>
+  <g transform="translate(499,679) rotate(-15.6) scale(0.340)" filter="url(#scrapShadow)">
+    <polygon points="-38,-40 12,-46 40,-33 43,26 8,41 -33,37 -41,-6" fill="#F1ECDE"/>
+    <text x="0" y="24" text-anchor="middle" class="f-fat" font-size="76" fill="#26241F" transform="rotate(-3)">i</text>
+  </g>
+  <g transform="translate(526,668) rotate(-27.2) scale(0.340)" filter="url(#scrapShadow)">
+    <polygon points="-30,-44 22,-39 34,-27 31,30 -12,40 -36,26 -33,-12" fill="#EFEADC"/>
+    <text x="0" y="24" text-anchor="middle" class="f-cond" font-size="76" fill="#1A1A18" transform="rotate(4)">u</text>
+  </g>
+  <g transform="translate(552,654) rotate(-27.8) scale(0.340)" filter="url(#scrapShadow)">
+    <polygon points="-36,-31 6,-42 37,-30 33,22 14,38 -30,33 -39,4" fill="#C9BC9C"/>
+    <text x="0" y="24" text-anchor="middle" class="f-serif" font-style="italic" font-weight="700" font-size="76" fill="#171614" transform="rotate(-5)">s</text>
+  </g>
+
+  <g filter="url(#patchShadow)" transform="translate(-283,-158) rotate(-12 535 510) translate(535,510) scale(0.8) translate(-535,-510)">
+    <polygon points="609,541 566,584 504,584 461,541 461,479 504,436 566,436 609,479" fill="#C9562E" stroke="#E8DCC8" stroke-width="8"/>
+    <text x="535" y="523" text-anchor="middle" class="sign" font-size="46" font-weight="700" letter-spacing="2" fill="#F7F1E4">SIDE</text>
+  </g>
+
+</svg>
