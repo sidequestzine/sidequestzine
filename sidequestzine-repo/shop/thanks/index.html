@@ -3,59 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Order confirmed — Side Quest</title>
-<meta name="description" content="Dispatches. Something observed, researched, or lived.">
-<meta property="og:title" content="Report — Side Quest">
-<meta property="og:description" content="Dispatches. Something observed, researched, or lived.">
-<meta property="og:image" content="/assets/badge.png">
+<title>Order confirmed | Side Quest Zine</title>
+<meta name="description" content="Your Side Quest preorder is in.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://sidequestzine.co/shop/thanks/">
+<meta property="og:site_name" content="Side Quest Zine">
 <meta property="og:type" content="website">
+<meta property="og:title" content="Order confirmed | Side Quest Zine">
+<meta property="og:description" content="Your Side Quest preorder is in.">
+<meta property="og:image" content="https://sidequestzine.co/assets/badge.png">
+<meta property="og:url" content="https://sidequestzine.co/shop/thanks/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Order confirmed | Side Quest Zine">
+<meta name="twitter:description" content="Your Side Quest preorder is in.">
+<meta name="twitter:image" content="https://sidequestzine.co/assets/badge.png">
 <link rel="icon" href="/assets/favicon.png">
-<link rel="stylesheet" href="/css/style.css">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem('sq-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="/css/style.css?v=2">
 </head>
-<body>
-
-<header>
+<body class="t-shop">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
   <div class="wrap bar">
     <a class="brand" href="/">
-      <img src="/assets/badge.png" alt="Side Quest badge">
+      <img src="/assets/thumbs/mark_1_classic.png" alt="" width="44" height="44">
       <span>SIDE<br>QUEST</span>
     </a>
-    <nav class="tabs">
-        <a href="/report/">Report</a>
-        <a href="/comic/">Comic</a>
-        <a href="/thought/">Thought</a>
-        <a href="/photos/">Photos</a>
-        <a href="/spotlight/">Spotlight</a>
-        <a href="/learn/">Learn</a>
-        <a href="/shop/">Shop</a>
-    </nav>
+    <nav class="tabs-wrap" aria-label="Sections"><div class="tabs">
+      <a href="/side-quests/" class="t-side-quests" style="--c:#E15A2C">Side Quests</a>
+      <a href="/comic/" class="t-comic" style="--c:#5B6B79">Comic</a>
+      <a href="/thought/" class="t-thought" style="--c:#2C6E9E">Thought</a>
+      <a href="/photos/" class="t-photos" style="--c:#E8337F">Photos</a>
+      <a href="/spotlight/" class="t-spotlight" style="--c:#5F8578">Spotlight</a>
+      <a href="/learn/" class="t-learn" style="--c:#A6501E">Learn</a>
+      <a href="/shop/" class="t-shop on" style="--c:#EAAC44" aria-current="page">Creative Arts Dept.</a>
+    </div></nav>
+    <a class="shop-pin" href="/shop/" aria-current="page">Shop</a>
+    <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode"><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="i-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg><span class="knob"></span></button>
   </div>
 </header>
 
+<main id="main" class="wrap page">
+  <section class="folder" style="--c:#EAAC44;view-transition-name:folder-shop">
+    <div class="tab"><a href="/#shop" aria-label="Back to the Creative Arts Dept. folder on the home page">Order confirmed</a></div>
+    <div class="sheet">
+      <a class="back" href="/#shop">&larr; back to the cabinet</a>
+      <div class="phead">
+        <span class="eyebrow">&#9679; order confirmed</span>
+        <h1>You're in.</h1>
+        <p>Your order is confirmed and a receipt is on its way to your email. The preorder window closes Sun, Dec 13, 2026 and everything ships by Thu, Jan 7, 2027. You'll hear from us either way.</p>
+      </div>
+      <a class="btn" href="/">Back to Side Quest</a>
 
-<div class="wrap">
-  <div class="wrap">
-  <section class="phead">
-    <span class="eyebrow">● order confirmed</span>
-    <h1>You're in.</h1>
-    <p>Your preorder is confirmed. A receipt is on its way to your email. Nothing ships until the window closes and the count is final — you'll hear from us either way.</p>
-    <a class="btn" href="/">Back to Side Quest</a>
+    </div>
   </section>
-</div>
-</div>
-
+</main>
 
 <footer>
   <div class="wrap">
-    <img src="/assets/badge.png" alt="Side Quest badge">
+    <div class="signup" id="signup">
+      <div class="signup-inner">
+        <div class="signup-copy">
+          <div class="signup-tag">GET IN BEFORE ISSUE 01</div>
+          <p>No spam, no daily nonsense. Just the Prologue, Issue 01 dropping, and the founding capsule opening. That's it.</p>
+        </div>
+        <form class="signup-form" id="signup-form">
+          <input type="email" name="email" placeholder="you@wherever.com" required autocomplete="email" aria-label="Email address">
+          <button type="submit">Keep me posted</button>
+        </form>
+      </div>
+      <div class="signup-msg" id="signup-msg" role="status" hidden></div>
+    </div>
+
+    <img src="/assets/thumbs/mark_1_classic.png" alt="Side Quest badge">
     <div class="tag">The stop sign says SIDE. Keep going.</div>
     <div class="links">
-      <a href="/report/">Report</a><a href="/comic/">Comic</a><a href="/thought/">Thought</a>
-      <a href="/photos/">Photos</a><a href="/spotlight/">Spotlight</a><a href="/learn/">Learn</a><a href="/shop/">Shop</a>
+      <a href="/side-quests/">Side Quests</a><a href="/comic/">Comic</a><a href="/thought/">Thought</a><a href="/photos/">Photos</a><a href="/spotlight/">Spotlight</a><a href="/learn/">Learn</a><a href="/shop/">Creative Arts Dept.</a>
     </div>
-    <div class="small">© Side Quest — with Rodrius</div>
+    <div class="socials"><a href="https://www.instagram.com/sidequest.zine" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@sidequest.zine" target="_blank" rel="noopener">Threads</a><a href="https://www.tiktok.com/@sidequestzine" target="_blank" rel="noopener">TikTok</a><a href="https://www.patreon.com/user?u=225603240" target="_blank" rel="noopener">Patreon</a><a href="https://discord.gg/Ufu7aw9aT" target="_blank" rel="noopener">Discord</a></div>
+    <div class="small">&copy; Side Quest, with Rodrius &middot; Seattle</div>
   </div>
 </footer>
 
+<script src="/js/site.js?v=2" defer></script>
 </body>
 </html>

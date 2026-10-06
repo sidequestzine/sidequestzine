@@ -12,26 +12,57 @@
  *   STRIPE_SECRET_KEY = sk_live_...  (or sk_test_... while testing)
  */
 
+// Prices and shipping live here, on the server. Edit these numbers, not the page.
+// amount and ship are in cents. ship = flat shipping for the whole order.
+const STICKER_SHIP = 150;   // stamped envelope
 const CATALOG = {
   cap: {
-    name: "prjct.sidequest. — Creative Arts Dept. Cap",
-    description: "Embroidered, navy. Creative Arts Dept. design.",
-    amount: 2800,            // cents
+    name: "prjct.sidequest. Creative Arts Dept. Cap",
+    description: "Embroidered, navy. Creative Arts Dept. design. Preorder, ships by Jan 7, 2027.",
+    amount: 2800, ship: 600, shipLabel: "USPS Ground Advantage",
     image: "/assets/thumbs/patch.png",
   },
-  stickers: {
-    name: "prjct.sidequest. — 3-Icon Sticker Set",
-    description: "OG Side Quest logo, Classic icon, Keep Going.",
-    amount: 1000,
-    image: "/assets/thumbs/classic.png",
-  },
   prjct_pin: {
-    name: "prjct.sidequest. — Pin",
-    description: "Gold enamel, unnumbered, off-system. Never reissued.",
-    amount: 1200,
+    name: "prjct.sidequest. Pin",
+    description: "Gold enamel, unnumbered, off-system. Never reissued. Preorder, ships by Jan 7, 2027.",
+    amount: 1200, ship: 300, shipLabel: "Padded envelope",
     image: "/assets/thumbs/prjct_pin.png",
   },
+  stickers: {
+    name: "3-Icon Sticker Set",
+    description: "OG Side Quest logo, Classic icon, Keep Going. Matte vinyl.",
+    amount: 800, ship: STICKER_SHIP, shipLabel: "Stamped envelope",
+    image: "/assets/thumbs/classic.png",
+  },
+  sticker_og: {
+    name: "Sticker: OG Side Quest Logo",
+    description: "Matte die-cut vinyl.",
+    amount: 300, ship: STICKER_SHIP, shipLabel: "Stamped envelope",
+    image: "/assets/thumbs/wide.png",
+  },
+  sticker_classic: {
+    name: "Sticker: Classic Icon",
+    description: "Matte die-cut vinyl.",
+    amount: 300, ship: STICKER_SHIP, shipLabel: "Stamped envelope",
+    image: "/assets/thumbs/classic.png",
+  },
+  sticker_keepgoing: {
+    name: "Sticker: Keep Going",
+    description: "Matte die-cut vinyl.",
+    amount: 300, ship: STICKER_SHIP, shipLabel: "Stamped envelope",
+    image: "/assets/thumbs/keepgoing.png",
+  },
+  sticker_prjct: {
+    name: "Sticker: prjct.sidequest. (white)",
+    description: "Matte die-cut vinyl. Founding edition.",
+    amount: 300, ship: STICKER_SHIP, shipLabel: "Stamped envelope",
+    image: "/assets/thumbs/sticker_prjct_white.png",
+  },
 };
+
+// Where you ship. Flat rates above are US prices, so US only for now.
+// To reopen Canada/UK, add them here AND raise the ship amounts for them.
+const COUNTRIES = ["US"];
 
 export async function onRequestPost(context) {
   const { request, env } = context;
@@ -43,7 +74,7 @@ export async function onRequestPost(context) {
 
     const body = await request.json();
     const item = CATALOG[body.item];
-    const qty = Math.min(Math.max(parseInt(body.qty, 10) || 1, 1), 5);
+    const qty = Math.min(Math.max(parseInt(body.qty, 10) || 1, 1), 10);
 
     if (!item) return json({ error: "Unknown item." }, 400);
 
@@ -59,16 +90,22 @@ export async function onRequestPost(context) {
     form.append("line_items[0][price_data][unit_amount]", String(item.amount));
     form.append("line_items[0][price_data][product_data][name]", item.name);
     form.append("line_items[0][price_data][product_data][description]", item.description);
+    // let buyers change the quantity on Stripe's page (1 to 10)
+    form.append("line_items[0][adjustable_quantity][enabled]", "true");
+    form.append("line_items[0][adjustable_quantity][minimum]", "1");
+    form.append("line_items[0][adjustable_quantity][maximum]", "10");
     // product image, shown on Stripe's checkout page.
     // built from the request origin so it works on both the .pages.dev
     // address and the custom domain without editing this file.
     if (item.image) {
       form.append("line_items[0][price_data][product_data][images][0]", origin + item.image);
     }
-    // collect a shipping address — you're mailing a physical object
-    form.append("shipping_address_collection[allowed_countries][0]", "US");
-    form.append("shipping_address_collection[allowed_countries][1]", "CA");
-    form.append("shipping_address_collection[allowed_countries][2]", "GB");
+    // collect a shipping address and charge flat shipping
+    COUNTRIES.forEach((c, i) => form.append(`shipping_address_collection[allowed_countries][${i}]`, c));
+    form.append("shipping_options[0][shipping_rate_data][type]", "fixed_amount");
+    form.append("shipping_options[0][shipping_rate_data][fixed_amount][amount]", String(item.ship));
+    form.append("shipping_options[0][shipping_rate_data][fixed_amount][currency]", "usd");
+    form.append("shipping_options[0][shipping_rate_data][display_name]", item.shipLabel);
 
     const res = await fetch("https://api.stripe.com/v1/checkout/sessions", {
       method: "POST",
