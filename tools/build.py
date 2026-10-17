@@ -224,7 +224,7 @@ def doc_content(f):
             f'<li><a href="{h}"><span class="k">{n}</span><span><span class="t">{t}</span></span></a></li>'
             for n, h, t, _ in sorted(TUTORIALS)) + "</ul>")
     if f["id"] == "shop":
-        figs = [("/assets/thumbs/patch_trim.png", "$28", "On the cap"),
+        figs = [("/assets/thumbs/patch_trim.png", "$35", "On the cap"),
                 ("/assets/thumbs/prjct_pin.png", "$12", "The pin"),
                 ("/assets/thumbs/classic.png", SET_PRICE, "3-icon sticker set"),
                 ("/assets/thumbs/keepgoing.png", SINGLE_PRICE, "Single stickers")]
@@ -385,7 +385,7 @@ def shop_page():
           <div class="item-badge">THE CAP &middot; PREORDER</div>
           <h3>Creative Arts Dept. Cap</h3>
           <p>This Creative Arts Dept. design, embroidered on the front. Final cap style and colours are confirmed by email before anything ships.</p>
-          <div class="price">$28</div>
+          <div class="price">$35</div>
           <button class="btn buy" data-item="cap">Preorder</button>
         </div>
         <div class="item">
