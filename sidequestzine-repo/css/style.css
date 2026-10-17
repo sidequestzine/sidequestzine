@@ -688,3 +688,4 @@ footer .socials a:hover{color:var(--accent);border-color:var(--accent);}
     transition:transform .55s cubic-bezier(.2,1.45,.35,1),opacity .25s ease;}
   .k-shop:not(.open):is(:hover,:focus-within,.peeking) .peek,.k-shop.revealing .peek{opacity:1;transform:translateY(calc(var(--strip) + 6px)) !important;}
 }
+.hero-badge{height:auto;aspect-ratio:1 / 1;}
