@@ -206,7 +206,7 @@ PEEKS = {
       </div>""",
     "shop": """<div class="pk pk-patch"><div class="patch-in">
         <svg class="stitch" viewBox="0 0 150 108" preserveAspectRatio="none" aria-hidden="true"><rect x="5" y="5" width="140" height="98" rx="12"/></svg>
-        <img src="/assets/thumbs/patch_trim.png" alt="" width="900" height="714">
+        <img src="/assets/thumbs/cad_cream.png" alt="" width="900" height="714">
       </div></div>""",
 }
 
@@ -224,12 +224,12 @@ def doc_content(f):
             f'<li><a href="{h}"><span class="k">{n}</span><span><span class="t">{t}</span></span></a></li>'
             for n, h, t, _ in sorted(TUTORIALS)) + "</ul>")
     if f["id"] == "shop":
-        figs = [("/assets/thumbs/patch_trim.png", "$35", "On the cap"),
+        figs = [("/assets/thumbs/cad_cream.png", "$35", "On the cap"),
                 ("/assets/thumbs/prjct_pin.png", "$12", "The pin"),
                 ("/assets/thumbs/classic.png", SET_PRICE, "3-icon sticker set"),
                 ("/assets/thumbs/keepgoing.png", SINGLE_PRICE, "Single stickers")]
         parts.append('<div class="prices">' + "".join(
-            f'<figure{" class=" + chr(34) + "swatch" + chr(34) if "patch" in i else ""}><img src="{i}" alt="" loading="lazy"><figcaption><b>{p}</b>{c}</figcaption></figure>'
+            f'<figure{" class=" + chr(34) + "swatch" + chr(34) if "cad_cream" in i else ""}><img src="{i}" alt="" loading="lazy"><figcaption><b>{p}</b>{c}</figcaption></figure>'
             for i, p, c in figs) + "</div>")
     verb = {"shop": "Open the Creative Arts Dept.", "learn": "Open all tutorials"}.get(f["id"], f"Open {f['label']}")
     parts.append(f'<a class="open-link" href="{f["href"]}">{verb} <span class="arr" aria-hidden="true">&rarr;</span></a>')
@@ -362,8 +362,8 @@ def shop_page():
         <p>Buying in here means you were here before the system existed.</p>
         <div class="cap-shots">
           <figure class="shot half swatch">
-            <img src="/assets/thumbs/patch_trim.png" alt="Creative Arts Dept. embroidery design">
-            <figcaption>The cap &middot; this design, embroidered on the front</figcaption>
+            <img src="/assets/thumbs/cad_cream.png" alt="Creative Arts Dept. embroidery design">
+            <figcaption>The cap &middot; stitched in cream on washed black denim</figcaption>
           </figure>
           <figure class="shot half">
             <img class="pin-shot" src="/assets/thumbs/prjct_pin.png" alt="prjct.sidequest. gold enamel pin">
@@ -381,10 +381,10 @@ def shop_page():
       <p class="sec-p">The cap and the pin are made to order. The stickers are the easy way in.</p>
       <div class="shop-grid">
         <div class="item">
-          <div class="item-img swatch"><img src="/assets/thumbs/patch_trim.png" alt="Creative Arts Dept. embroidery design, as it will be stitched on the cap" loading="lazy"></div>
+          <div class="item-img swatch"><img src="/assets/thumbs/cad_cream.png" alt="Creative Arts Dept. design in cream, as it will be stitched on the washed black denim cap" loading="lazy"></div>
           <div class="item-badge">THE CAP &middot; PREORDER</div>
           <h3>Creative Arts Dept. Cap</h3>
-          <p>This Creative Arts Dept. design, embroidered on the front. Final cap style and colours are confirmed by email before anything ships.</p>
+          <p>Snow-washed black denim dad cap with the Creative Arts Dept. design embroidered in cream on the front.</p>
           <div class="price">$35</div>
           <button class="btn buy" data-item="cap">Preorder</button>
         </div>

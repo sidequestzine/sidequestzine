@@ -18,7 +18,7 @@ const STICKER_SHIP = 150;   // stamped envelope
 const CATALOG = {
   cap: {
     name: "prjct.sidequest. Creative Arts Dept. Cap",
-    description: "Creative Arts Dept. design, embroidered. Preorder, ships by Jan 7, 2027.",
+    description: "Snow-washed black denim, Creative Arts Dept. design embroidered in cream. Preorder, ships by Jan 7, 2027.",
     amount: 3500, ship: 600, shipLabel: "USPS Ground Advantage",
     image: "/assets/thumbs/patch.png",
   },

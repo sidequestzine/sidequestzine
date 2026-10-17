@@ -337,9 +337,15 @@ body.t-home        { --accent:var(--coral); }
 .cap-lettering .lettering{max-width:380px;margin:4px 0 6px;}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
 /* the embroidery design is drawn for a light ground, so its box stays light in both themes */
-.swatch,.prices figure.swatch{background:#F1E9D8 !important;}
-.swatch figcaption{color:#36434E !important;}
-.swatch figcaption b{color:#182530 !important;}
+/* the cap: cream-lettering embroidery on snow-washed black denim, same in both themes */
+.swatch,.prices figure.swatch{
+  background:
+    radial-gradient(120% 90% at 30% 20%, rgba(255,255,255,.10), transparent 60%),
+    radial-gradient(90% 70% at 80% 85%, rgba(255,255,255,.06), transparent 60%),
+    repeating-linear-gradient(115deg, rgba(255,255,255,.035) 0 2px, transparent 2px 5px),
+    #2A2B2E !important;}
+.swatch figcaption{color:#D9D2C3 !important;}
+.swatch figcaption b{color:#F3ECDD !important;}
 .shot .pin-shot{width:100%;display:block;}
 .item .no-zoom img,.item:hover .no-zoom img{transform:none;}
 
@@ -671,7 +677,7 @@ footer .socials a:hover{color:var(--accent);border-color:var(--accent);}
 @keyframes riffle{0%{transform:translateY(-14px);}50%{transform:translateY(-40px) rotate(-8deg);}100%{transform:translateY(-18px) rotate(0);}}
 
 /* ---- 07 Creative Arts Dept.: the embroidery peeks, then pops ---- */
-.patch-in{position:absolute;inset:0;border-radius:14px;background:#F1E9D8;box-shadow:0 4px 14px rgba(24,37,48,.3);transform-origin:center bottom;}
+.patch-in{position:absolute;inset:0;border-radius:14px;background:radial-gradient(120% 90% at 30% 20%, rgba(255,255,255,.12), transparent 60%),repeating-linear-gradient(115deg, rgba(255,255,255,.04) 0 2px, transparent 2px 5px),#2A2B2E;box-shadow:0 4px 14px rgba(24,37,48,.3);transform-origin:center bottom;}
 .patch-in img{position:absolute;left:50%;top:50%;width:118px;height:auto;transform:translate(-50%,-50%);}
 .stitch{position:absolute;inset:0;width:100%;height:100%;}
 .stitch rect{fill:none;stroke:#D9892B;stroke-width:2.2;stroke-dasharray:6 5;}
