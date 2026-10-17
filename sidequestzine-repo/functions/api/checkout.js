@@ -19,7 +19,7 @@ const CATALOG = {
   cap: {
     name: "prjct.sidequest. Creative Arts Dept. Cap",
     description: "Creative Arts Dept. design, embroidered. Preorder, ships by Jan 7, 2027.",
-    amount: 2800, ship: 600, shipLabel: "USPS Ground Advantage",
+    amount: 3500, ship: 600, shipLabel: "USPS Ground Advantage",
     image: "/assets/thumbs/patch.png",
   },
   prjct_pin: {

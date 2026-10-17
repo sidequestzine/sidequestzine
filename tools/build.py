@@ -91,7 +91,7 @@ SET_PRICE, SET_WAS = "$8", "$9"
 # ------------------------------------------------------------------ pieces
 THEME_INIT = """<meta name="color-scheme" content="light dark">
 <script>try{var t=localStorage.getItem('sq-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
-<link rel="stylesheet" href="/css/style.css?v=2">"""
+<link rel="stylesheet" href="/css/style.css?v=3">"""
 
 SUN = '<svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>'
 MOON = '<svg class="i-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg>'
@@ -146,7 +146,7 @@ FOOTER = """
   </div>
 </footer>
 
-<script src="/js/site.js?v=2" defer></script>
+<script src="/js/site.js?v=3" defer></script>
 </body>
 </html>
 """.replace("LINKS", "".join(f'<a href="{f["href"]}">{f["label"]}</a>' for f in FOLDERS))
