@@ -72,10 +72,10 @@ TUTORIALS = [
      "Nine steps, sketch to product. The whole arc, including the parts that got scrapped."),
     ("03", "/learn/build-the-machine/", "Build the Machine",
      "The deep one. Write a generator that writes your site, so changing one line updates every page. Plus the SVG bug nobody warns you about."),
-    ("04", "/learn/receive-real-money/", "Receive Real Money",
+    ("04", "/learn/receive-real-money/", "Get Paid for What You Make",
      "Build a preorder shop with Stripe and one server function. No Shopify, no monthly fee."),
     ("05", "/learn/own-the-list/", "Own the List",
-     "Build a real email signup, server-side, so an audience you actually own doesn't depend on any algorithm's mood."),
+     "Build a real email signup, server-side, so the community you build doesn't depend on any algorithm's mood."),
 ]
 
 # shop items: id must match functions/api/checkout.js
